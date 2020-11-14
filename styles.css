@@ -165,9 +165,11 @@ body {
 #aside {
   width: 30%;
   max-width: 300px;
+  margin: 3%;
 }
 #content {
   width: 100%;
+  margin: 3%;
 }
 .main {
   flex-direction: row;
@@ -212,6 +214,14 @@ body {
     vertical-align: text-top;
     fill: rgb(255, 255, 255);
 }
+.repo-m{
+    margin: 10px 10px 10px 0;
+}
+.repo-icons {
+    display: inline-block;
+    vertical-align: text-top;
+    fill: rgb(94, 95, 92);
+  }
 .select-title{
     color: rgb(116, 117, 115);
 }
