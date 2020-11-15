@@ -312,7 +312,9 @@ let data = {
         "organizations": {
           "nodes": [
             {
-              "name": "Senergy E Global"
+              "name": "Senergy E Global",
+              "avatarUrl": "https://avatars2.githubusercontent.com/u/68426556?v=4",
+            "websiteUrl": "https://senergyeglobal.com/"
             }
           ]
         },
@@ -456,3 +458,12 @@ userFollowers.innerHTML =  data.data.viewer.followers.totalCount
 
 let userFollowing = document.getElementById('user-following');
 userFollowing.innerHTML = data.data.viewer.following.totalCount
+
+let userLocation = document.getElementById('user-location');
+userLocation.innerHTML = data.data.viewer.location;
+
+let userEmail = document.getElementById('user-email');
+userEmail.innerHTML = data.data.viewer.email;
+
+let userOrg = document.getElementById('user-organization');
+userOrg.setAttribute('src', data.data.viewer.organizations.nodes[0].avatarUrl)

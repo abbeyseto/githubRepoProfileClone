@@ -73,27 +73,57 @@
         <!--SIDE PROFILE -->
         <aside id="aside">
             <div>
-                <img id="user-avatar" class="avatar-large" src="https://via.placeholder.com/200"
-                    alt="profile-picture" />
-                <h3 id="user-full-name">{name here}</h3>
-                <p id="user-username">{username here}</p>
-                <p id="user-description">{description here}</p>
-                <button>Edit Profile</button>
-                <div>
+                <div class="full-bio">
+                    <img id="user-avatar" class="avatar-large" src="https://via.placeholder.com/200"
+                        alt="profile-picture" />
+                    <div class="bio">
+                        <h3 id="user-full-name" class="fullname">{name here}</h3>
+                        <span id="user-username" class="username">{username here}</span>
+                    </div>
+                </div>
+                <p id="user-description" class="description">{description here}</p>
+                <button class="sort-find-inputs w-80">Edit Profile</button>
+                <div style="margin:10px 0;">
                     <span>
-                        <span id="user-followers"> </span> <span>followers</span>
+                        <svg class="tab-icons" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                            aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M5.5 3.5a2 2 0 100 4 2 2 0 000-4zM2 5.5a3.5 3.5 0 115.898 2.549 5.507 5.507 0 013.034 4.084.75.75 0 11-1.482.235 4.001 4.001 0 00-7.9 0 .75.75 0 01-1.482-.236A5.507 5.507 0 013.102 8.05 3.49 3.49 0 012 5.5zM11 4a.75.75 0 100 1.5 1.5 1.5 0 01.666 2.844.75.75 0 00-.416.672v.352a.75.75 0 00.574.73c1.2.289 2.162 1.2 2.522 2.372a.75.75 0 101.434-.44 5.01 5.01 0 00-2.56-3.012A3 3 0 0011 4z">
+                            </path>
+                        </svg><span id="user-followers"> </span> <span>followers</span>
                     </span>
                     <span>
                         <span id="user-following"></span> <span>following</span>
                     </span>
                 </div>
                 <div>
-                    <p id="user-location">{location here}</p>
-                    <p id="user-email">{Email here}</p>
+                    <div style="margin:10px 0;">
+                        <span>
+                            <svg class="tab-icons" viewBox="0 0 16 16" version="1.1" width="16" height="16"
+                                aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M11.536 3.464a5 5 0 010 7.072L8 14.07l-3.536-3.535a5 5 0 117.072-7.072v.001zm1.06 8.132a6.5 6.5 0 10-9.192 0l3.535 3.536a1.5 1.5 0 002.122 0l3.535-3.536zM8 9a2 2 0 100-4 2 2 0 000 4z">
+                                </path>
+                            </svg>
+                            <span id="user-location">{location here}</span>
+                        </span>
+                    </div>
+                    <div style="margin:10px 0;">
+                        <span><svg class="tab-icons" viewBox="0 0 16 16" version="1.1" width="16" height="16"
+                                aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M1.75 2A1.75 1.75 0 000 3.75v.736a.75.75 0 000 .027v7.737C0 13.216.784 14 1.75 14h12.5A1.75 1.75 0 0016 12.25v-8.5A1.75 1.75 0 0014.25 2H1.75zM14.5 4.07v-.32a.25.25 0 00-.25-.25H1.75a.25.25 0 00-.25.25v.32L8 7.88l6.5-3.81zm-13 1.74v6.441c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V5.809L8.38 9.397a.75.75 0 01-.76 0L1.5 5.809z">
+                                </path>
+                            </svg>
+                            <span id="user-email">{Email here}</span>
+                        </span>
+                    </div>
+
+
                 </div>
                 <div>
-                    <h4>Organizations</h4>
-                    <img src="#" alt="name" />
+                    <h4 class="org">Organizations</h4>
+                    <img class="avatar-org" id="user-organization" src="#" alt="name" />
                 </div>
             </div>
         </aside>
@@ -166,7 +196,47 @@
     </main>
     <!--END OF MAIN -->
     <footer>
-        C 2020
+        <div style="padding: 0 3%;" class="position-relative d-flex flex-items-center  ">
+            <a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mr-lg-4"
+                href="https://github.com">
+                <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                    </path>
+                </svg>
+            </a>
+            <ul class="header-links">
+                <li class="links">© 2020 GitHub, Inc.</li>
+                <li class="links"><a data-ga-click="Footer, go to terms, text:terms"
+                        href="https://github.com/site/terms">Terms</a></li>
+                <li class="links"><a data-ga-click="Footer, go to privacy, text:privacy"
+                        href="https://github.com/site/privacy">Privacy</a></li>
+                <li class="links" hidden="hidden">
+                    <button data-ga-click="Footer, go to cookie preferences, text:cookie preferences"
+                        class="btn-link js-cookie-consent-preferences-link" type="button">Cookie
+                        Preferences</button>
+                </li>
+                <li class="links"><a data-ga-click="Footer, go to security, text:security"
+                        href="https://github.com/security">Security</a></li>
+                <li class="links"><a href="https://githubstatus.com/"
+                        data-ga-click="Footer, go to status, text:status">Status</a></li>
+                <li class="links"><a data-ga-click="Footer, go to help, text:help"
+                        href="https://docs.github.com">Help</a></li>
+                <li class="links"><a data-ga-click="Footer, go to contact, text:contact"
+                        href="https://github.com/contact">Contact GitHub</a></li>
+                <li class="links"><a href="https://github.com/pricing"
+                        data-ga-click="Footer, go to Pricing, text:Pricing">Pricing</a></li>
+                <li class="links"><a href="https://docs.github.com" data-ga-click="Footer, go to api, text:api">API</a>
+                </li>
+                <li class="links"><a href="https://services.github.com"
+                        data-ga-click="Footer, go to training, text:training">Training</a></li>
+                <li class="links"><a href="https://github.blog" data-ga-click="Footer, go to blog, text:blog">Blog</a>
+                </li>
+                <li class="links"><a data-ga-click="Footer, go to about, text:about"
+                        href="https://github.com/about">About</a></li>
+            </ul>
+        </div>
     </footer>
     <script type="text/javascript" src="index.js"></script>
 </body>

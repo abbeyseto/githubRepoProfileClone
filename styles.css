@@ -6,7 +6,36 @@ body {
   font-size: 14px;
   line-height: 1.5;
 }
+.fullname {
+  font-size: 26px;
+  line-height: 0;
+}
 
+.org {
+  font-size: 20px;
+  line-height: 0;
+}
+
+.w-80 {
+  width: 80%;
+  background: white;
+}
+.username {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+  color: #586069;
+}
+.description {
+  font-size: 16px !important;
+}
+
+.bio,
+.full-bio {
+  display: flex;
+  flex-direction: column;
+}
 .header {
   display: flex;
   flex-direction: row;
@@ -23,6 +52,11 @@ body {
   flex-direction: row;
 }
 
+a {
+  text-decoration: none;
+  font-size: 12px !important;
+  font-weight: 200;
+}
 .links {
   font-weight: 600;
   margin: 0.75rem;
@@ -152,6 +186,12 @@ body {
   border-radius: 50%;
 }
 
+.avatar-org {
+  width: 35px;
+  height: 35px;
+  border-radius: 25%;
+}
+
 .avatar-large {
   width: 200px;
   height: 200px;
@@ -176,10 +216,10 @@ body {
   width: 100%;
 }
 
-.sort-find{
-    margin: 15px 0;
-    padding: 15px 0;
-    border-bottom: 1px solid lightgray;
+.sort-find {
+  margin: 15px 0;
+  padding: 15px 0;
+  border-bottom: 1px solid lightgray;
 }
 .sort-find-inputs {
   display: inline;
@@ -190,12 +230,12 @@ body {
 }
 
 .repo-language-color {
-    position: relative;
-    top: 1px;
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
 }
 .select-border {
   border: none;
@@ -203,27 +243,27 @@ body {
   width: min-content;
 }
 
-.new-repo{
-    color: white !important;
-    background-color:#2ea44f ;
-    padding: 7px 15px;
+.new-repo {
+  color: white !important;
+  background-color: #2ea44f;
+  padding: 7px 15px;
 }
 
-.new-repo-icon{
-    display: inline-block;
-    vertical-align: text-top;
-    fill: rgb(255, 255, 255);
+.new-repo-icon {
+  display: inline-block;
+  vertical-align: text-top;
+  fill: rgb(255, 255, 255);
 }
-.repo-m{
-    margin: 10px 10px 10px 0;
+.repo-m {
+  margin: 10px 10px 10px 0;
 }
 .repo-icons {
-    display: inline-block;
-    vertical-align: text-top;
-    fill: rgb(94, 95, 92);
-  }
-.select-title{
-    color: rgb(116, 117, 115);
+  display: inline-block;
+  vertical-align: text-top;
+  fill: rgb(94, 95, 92);
+}
+.select-title {
+  color: rgb(116, 117, 115);
 }
 @media only screen and (max-width: 600px) {
   .main {
@@ -239,5 +279,15 @@ body {
 
   .tab-icons-active {
     display: none;
+  }
+  .full-bio {
+    flex-direction: row;
+  }
+  .bio {
+    padding: 0 5%;
+    margin: 0 3%;
+  }
+  .w-80 {
+    width: 90%;
   }
 }
